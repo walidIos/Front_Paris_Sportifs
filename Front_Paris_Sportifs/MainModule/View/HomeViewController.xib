@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Front_Paris_Sportifs" customModuleProvider="target">
+            <connections>
+                <outlet property="SearchLeague" destination="Q3H-jR-QqX" id="0np-oI-hdO"/>
+                <outlet property="collectionView" destination="tNZ-C1-uSk" id="t3n-r3-wSu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Q3H-jR-QqX">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-C1-uSk">
+                    <rect key="frame" x="16" y="95" width="382" height="767"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s58-2f-wg0">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bZ5-eC-wlW"/>
+                        <outlet property="delegate" destination="-1" id="ncB-SY-Pcw"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tNZ-C1-uSk" firstAttribute="top" secondItem="Q3H-jR-QqX" secondAttribute="bottom" id="6Qy-Re-DY1"/>
+                <constraint firstItem="Q3H-jR-QqX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cti-PM-cnA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tNZ-C1-uSk" secondAttribute="bottom" id="Sw9-PP-R3w"/>
+                <constraint firstItem="Q3H-jR-QqX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UIa-tV-j4e"/>
+                <constraint firstItem="Q3H-jR-QqX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="eN3-E1-rqj"/>
+                <constraint firstItem="tNZ-C1-uSk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gIw-5p-iCM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tNZ-C1-uSk" secondAttribute="trailing" constant="16" id="mgs-sS-bAJ"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
